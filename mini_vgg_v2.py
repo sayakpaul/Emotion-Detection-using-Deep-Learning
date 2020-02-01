@@ -14,7 +14,7 @@ from tensorflow.keras.layers import concatenate
 import math
 
 class MiniVGGNetModel(Model):
-	def __init__(self, classes, imageShape, chanDim=-1):
+	def __init__(self, classes, image, chanDim=-1):
 		# call the parent constructor
 		super(MiniVGGNetModel, self).__init__()
 
