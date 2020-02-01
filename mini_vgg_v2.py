@@ -20,7 +20,7 @@ class MiniVGGNetModel(Model):
 
 		# determine the number of channels to output in the first
 		# conv layer
-		width, height, channels = image.shape
+		width, height, channels = image
 		outChannels = 2**math.floor(math.log2(channels*width*height))
 
 		# initialize the layers in the first (CONV => RELU) * 2 => POOL
