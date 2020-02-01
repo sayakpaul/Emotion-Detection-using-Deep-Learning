@@ -33,14 +33,11 @@ class MiniVGGNetModel(Model):
 		self.bn1B = BatchNormalization(axis=chanDim)
 		self.pool1 = MaxPooling2D(pool_size=(2, 2))
 
-		# initialize the layers in the second (CONV => RELU) * 2 => POOL
+		# initialize the layers in the second (CONV => RELU) => POOL
 		# layer set
 		self.conv2A = Conv2D(outChannels*4, (3, 3), strides=2, padding="same")
 		self.act2A = Activation("relu")
 		self.bn2A = BatchNormalization(axis=chanDim)
-		self.conv2B = Conv2D(outChannels*8, (3, 3), strides=2, padding="same")
-		self.act2B = Activation("relu")
-		self.bn2B = BatchNormalization(axis=chanDim)
 		self.pool2 = MaxPooling2D(pool_size=(2, 2))
 
 		# initialize the layers in our fully-connected layer set
@@ -68,9 +65,6 @@ class MiniVGGNetModel(Model):
 		x = self.conv2A(x)
 		x = self.act2A(x)
 		x = self.bn2A(x)
-		x = self.conv2B(x)
-		x = self.act2B(x)
-		x = self.bn2B(x)
 		x = self.pool2(x)
 
 		# build our FC layer set
