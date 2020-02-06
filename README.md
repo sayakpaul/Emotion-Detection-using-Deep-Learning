@@ -20,5 +20,5 @@ The combination of VGG16, SGD and a bit of data augmentation yielded the best ge
 
 Experimentation report available here: https://app.wandb.ai/sayakpaul/emotion-detection
 
-Feedback welcome :)
+I happily welcome any feedback :)
 
