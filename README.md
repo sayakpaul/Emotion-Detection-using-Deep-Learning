@@ -14,9 +14,9 @@ This project demonstrates the use of Deep Learning to detect emotion (sad, angry
 - Shallow CNN with progressively increasing channels
 - Mini VGG16 with LSUV
 
-The combination of VGG16, SGD and a bit of data augmentation yielded the best generalization. 
+The combination of VGG16, SGD, a bit of data augmentation, and Label Smoothing yielded the best generalization. 
 
-![](https://i.ibb.co/SBPMK6L/W-B-Chart-2-1-2020-2-38-09-PM.png)
+![](https://i.ibb.co/92nQjFC/W-B-Chart-2-14-2020-7-22-52-PM.png)
 
 Experimentation report available here: https://app.wandb.ai/sayakpaul/emotion-detection
 
